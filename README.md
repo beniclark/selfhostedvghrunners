@@ -273,6 +273,19 @@ Most enterprise customers benefit from a **hybrid strategy**:
 
 ---
 
+## Preparation Tips
+
+- **Know the customer's current build volume.** Pull their minutes usage and concurrency data ahead of time so you can model cost scenarios for GitHub-hosted vs. self-hosted.
+- **Understand their network topology.** If they have on-prem dependencies, private databases, or air-gapped environments, self-hosted runners (or larger runners with VNET) become much more relevant.
+- **Have a hybrid recommendation ready.** Most enterprise customers end up using both GitHub-hosted and self-hosted runners. Be prepared to explain how runner groups and `runs-on` labels make this seamless.
+- **Be ready to discuss ARC and Runner Scale Sets.** Kubernetes-based autoscaling is a common enterprise pattern. Know the requirements (K8s 1.27+, Helm 3) and the support boundaries.
+- **Bring pricing calculators.** Have the [GitHub pricing page](https://github.com/pricing) and billing docs ready for included minutes per plan and per-minute overage rates.
+- **Know the larger runner capabilities.** Many traditional reasons for self-hosted runners (private networking, static IPs, GPU, high memory) are now addressed by larger runners. This changes the conversation significantly.
+- **Prepare a cost comparison template.** Build a simple spreadsheet or table comparing GitHub-hosted per-minute costs against estimated self-hosted infrastructure + staff costs at the customer's build volume.
+- **Anticipate compliance questions.** Have GitHub's security certifications and compliance documentation bookmarked. Know when to recommend self-hosted for regulatory requirements GitHub-hosted cannot satisfy.
+
+---
+
 ## Reference Documentation
 
 | Topic | Link |
